@@ -22,9 +22,7 @@ public class ServerTextFrame extends JFrame {
 	private int width = 700;
 	private int height = 500;
 
-	/**
-	 * The constructor organize the GUI component for the window.
-	 */
+
 	public ServerTextFrame () {
 		
 		// Default frame setting
@@ -48,13 +46,6 @@ public class ServerTextFrame extends JFrame {
 				
 	}
 	
-	/**
-	 * This method create and arrange Swing components to display the status of 
-	 * the server application
-	 * 
-	 * @param font - Default font for the application
-	 * @return Swing components organized in a panel.
-	 */
 	private JPanel getServerStatusPanel(Font font) {
 		
 		// Components to display server's status
@@ -77,13 +68,6 @@ public class ServerTextFrame extends JFrame {
 		
 	}
 	
-	/**
-	 * This method create and arrange Swing components the status of request 
-	 * send to the client.
-	 * 
-	 * @param font - Default font for the application
-	 * @return Swing components organized in a panel.
-	 */
 	private JPanel getRequestStatusPanel () {
 		
 		// Component to display request's status
@@ -104,10 +88,6 @@ public class ServerTextFrame extends JFrame {
 		
 	}
 	
-	
-	/**
-	 * This method arrange the GUI component on the frame
-	 */
 	public void loadComponent() {
 		
 		// Get the server status panel and add to frame
@@ -123,11 +103,7 @@ public class ServerTextFrame extends JFrame {
 		
 	}
 	
-	/**
-	 * This method update the status of the server
-	 * 
-	 * @param flag: status of the server
-	 */
+
 	public void updateServerStatus(boolean flag) {
 		
 		String status = "Waiting for connection.";
@@ -139,11 +115,7 @@ public class ServerTextFrame extends JFrame {
 		
 	}
 	
-	/**
-	 * This method update the status of the request sent to the client
-	 * 
-	 * @param status: request status
-	 */
+
 	public void updateRequestStatus (String status) {
 		
 		// Get current status displayed on the window
@@ -156,11 +128,7 @@ public class ServerTextFrame extends JFrame {
 		txtRequestStatus.setEditable(false);
 	}
 	
-	/**
-	 * This method define a font to a generic style.
-	 * 
-	 * @return font object
-	 */
+
 	private Font getFontStyle() {
 		
 		Font font = new Font (Font.SANS_SERIF, Font.PLAIN, 30);

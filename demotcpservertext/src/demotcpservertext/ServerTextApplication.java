@@ -35,6 +35,8 @@ public class ServerTextApplication {
 			
 			// Generate current text
 			String currentText = textGenerator.getCurrentText();
+			
+			//Generate wordcount
 			String wordCount = String.valueOf(ServerWordCount.wordcount(currentText));
 			
 			// Create stream to write data on the network
