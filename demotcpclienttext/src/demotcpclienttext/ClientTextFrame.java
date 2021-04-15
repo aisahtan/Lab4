@@ -18,16 +18,10 @@ public class ClientTextFrame extends JFrame {
 	private JLabel lblStatusValue;
 	private JLabel lblServerWord;
 
-	
 	// Private attributes for frame size
 	private int width = 700;
 	private int height = 200;
 
-
-	/**
-	 * The constructor that initialize and organize the Swing components on 
-	 * the frame.
-	 */
 	public ClientTextFrame () {
 		
 		// Default frame setting
@@ -146,9 +140,6 @@ public class ClientTextFrame extends JFrame {
 	} 
 	
 	
-	/**
-	 * This method arrange the Swing components on the frame.
-	 */
 	private void loadComponent() {
 		
 		// Get font
@@ -158,22 +149,16 @@ public class ClientTextFrame extends JFrame {
 		JPanel northPanel = this.getConnectionStatusPanel(font);		
 		this.add(northPanel, BorderLayout.NORTH);
 		
-		// Get server date's panel and add to frame
+		// Get server text's panel and add to frame
 		JPanel center = getServerTextPanel(font);
 		this.add(center, BorderLayout.CENTER);
 		
-		// Get server date's panel and add to frame
+		// Get server wordcount's panel and add to frame
 		JPanel southPanel = getServerWordPanel(font);
 		this.add(southPanel, BorderLayout.SOUTH);
 		
 	}
 	
-	
-	/**
-	 * This method define a font to a generic style.
-	 * 
-	 * @return font object
-	 */
 	private Font getFontStyle() {
 		
 		Font font = new Font ("Serif", Font.PLAIN, 30);

@@ -30,7 +30,7 @@ public class ClientTextApplication {
 		BufferedReader bufferedReader2 = new BufferedReader(
 				new InputStreamReader(socket.getInputStream()));
 		
-		// Display the current date
+		// Display the current text and wordcount
 		String currentText = bufferedReader.readLine();
 		clientTextFrame.updateServerText(currentText);
 		
@@ -39,7 +39,7 @@ public class ClientTextApplication {
 		
 		// Close everything
 		bufferedReader.close();
-		//bufferedReader2.close();
+		//bufferedReader.close();
 		socket.close();
 
 	}
